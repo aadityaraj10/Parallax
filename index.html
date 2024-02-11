@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TravelMania</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="index.html" class="logo">TravelMania</a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Destination</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+            <img src="./img/bird1.png" id="bird1">
+            <img src="./img/bird2.png" id="bird2">
+            <img src="./img/forest.png" id="forest">
+            <a href="index.html" id="btn">Explore</a>
+            <img src="./img/rocks.png" id="rocks">
+            <img src="./img/water.png" id="water">
+        </section>
+        <div class="sec">
+            <h2>TravelMania: An Ode to the Journey</h2>
+            <p>
+                Traveling. The word itself evokes images of distant lands, vibrant cultures, and breathtaking landscapes. 
+                It whispers of adventure, self-discovery, and stories waiting to be written. 
+                While often viewed as a leisure activity, traveling transcends mere relaxation. 
+                It is a powerful force, shaping individuals and societies in profound ways.
+            <br><br>One of the most significant impacts of travel is its ability to broaden our perspectives. 
+                Stepping outside our familiar bubbles, we encounter diverse customs, beliefs, and ways of life. 
+                We witness historical remnants that whisper of bygone eras and marvel at architectural wonders that celebrate human ingenuity. 
+                From bustling cityscapes to serene countrysides, each destination paints a unique portrait of the world, 
+                challenging our preconceived notions and expanding our understanding of humanity.
+            <br><br>This exposure fosters empathy and tolerance. By engaging with locals, we gain insights into their struggles, aspirations, and perspectives. 
+                We see past stereotypes and recognize the shared threads that bind humanity across borders. This newfound understanding fosters compassion, 
+                encouraging us to appreciate the richness of human diversity and advocate for inclusivity.
+            <br><br>Travel also serves as a potent catalyst for personal growth. Removed from the comfort zones of our daily routines, 
+                we face challenges and uncertainties that demand resilience and adaptability. 
+                Whether navigating language barriers, deciphering unfamiliar transportation systems, 
+                or forging connections with strangers, each hurdle offers opportunities to develop resourcefulness, problem-solving skills, and confidence. 
+                Overcoming these challenges empowers us, reminding us of our inner strength and adaptability.
+            <br><br>Furthermore, travel ignites creativity and fuels the imagination. Immersing ourselves in new environments sparks a sense of awe and wonder. 
+                We are captivated by vibrant colors, intoxicating aromas, and unfamiliar sounds. These sensory experiences stimulate our minds, 
+                triggering a cascade of creative ideas and inspiring artistic expression. 
+                From photography and writing to painting and music, travel serves as a wellspring of inspiration, nurturing artistic exploration and self-expression.
+            <br><br>Beyond its individual benefits, travel plays a crucial role in connecting communities and fostering cultural exchange. 
+                Tourists inject economic vitality into host destinations, supporting local businesses and livelihoods. 
+                Cultural exchange programs offer opportunities for dialogue and collaboration, promoting understanding and bridging divides. 
+                Through travel, we build bridges across geographical and cultural boundaries, contributing to a more peaceful and interconnected world.
+            <br><br>Travel is more than just a journey to different places; it is a transformative journey within ourselves. 
+                It broadens our perspectives, fosters empathy, cultivates personal growth, ignites creativity, and connects communities. 
+                As we traverse the globe, we not only collect souvenirs and photographs, but also gather experiences, insights, 
+                and connections that enrich our lives and shape us into more compassionate, adaptable, and globally-minded individuals. 
+                So, pack your bags, embrace the unknown, and embark on your own transformative journey through the power of travel. 
+                Remember, the most beautiful destination is often not the place, but the transformation it inspires within you.
+            </p>
+        </div>
+
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
